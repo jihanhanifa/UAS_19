@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($_FILES['foto']['name'])) {
         $nama_file = $_FILES['foto']['name'];
         $tmp_file = $_FILES['foto']['tmp_name'];
-        $path = time() . '_' . basename($nama_file); // Simpan di folder utama
+        $path = time() . '_' . basename($nama_file);
 
         if (move_uploaded_file($tmp_file, $path)) {
             $foto = $path;
